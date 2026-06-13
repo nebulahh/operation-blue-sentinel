@@ -1,0 +1,46 @@
+WAZUH DAILY HEALTH REPORT
+
+Date: 2026-06-13
+Shift: Morning
+Analyst: ____________________ - SOC Analyst  
+Wazuh Manager IP/Hostname:
+
+1. EXECUTIVE SUMMARY
+Agent coverage for monitored environment is at 100.00%. 1/1 registered Windows agent is Active and reporting telemetry continuously for the last 24 hours. No disconnected, pending, or never-connected agents detected. Environment visibility is fully operational. Overall status: Green/Normal.
+
+2. AGENT STATUS OVERVIEW
+| Metric | Count | % | Status |
+|--------------------|-------|-------|-----------------|
+| Total Agents | 1 | 100% | 🟢 Normal |
+| Active | 1 | 100% | 🟢 Normal |
+| Disconnected | 0 | 0% | 🟢 Normal |
+| Pending | 0 | 0% | 🟢 Normal |
+| Never Connected | 0 | 0% | 🟢 Normal |
+| Agents Coverage | 1/1 | 100.00% | 🟢 Normal |
+
+Screenshot Evidence: Agents_20260411_Active.png
+
+3. ACTIVE AGENTS DETAIL
+| Agent Name | ID | IP Address | OS + Version | Wazuh Version | Group | Cluster | Status | Last Seen |
+|------------|----|------------|--------------|---------------|-------|---------|--------|-----------|
+| Secondary-Windows-VM | 001 | 10.12.235.251 | Microsoft Windows 11 Home 10.0.26200.8655 | v4.7.5 | default | node01 | Active | Last 24hrs |
+
+4. CRITICAL ALERTS TRIAGED - LAST 24HRS
+| Time WAT | Rule ID | Level | Description | Host | Verdict TP/FP | Action Taken |
+|----------|---------|-------|-------------|------|---------------|--------------|
+| N/A | N/A | N/A | No critical alerts Level 12+ triggered | Secondary-Windows-VM | N/A | Monitoring continues |
+
+5. ACTIONS TAKEN BY SOC ANALYST
+1. [HH:MM] - Monitored Wazuh dashboard → Agents tab. Verified system status.
+2. [HH:MM] - Confirmed 1 Active agent, 0 Disconnected. Agents Coverage = 100.00%.
+3. [HH:MM] - Reviewed Evolution graph: constant green line, no downtime in 24hrs.
+4. [HH:MM] - Logged healthy status in incident tracker. No escalation required.
+
+6. RECOMMENDATIONS / FOLLOW-UP
+1. Maintain current monitoring. Coverage >95% meets operational threshold.
+2. Plan deployment of Wazuh agents to additional endpoints to expand visibility.
+3. No rule tuning required at this time. No false positives detected.
+
+7. STATUS & SIGN-OFF
+Overall Status: 🟢 Normal - Full visibility maintained
+Handover Notes: Agent Secondary-Windows-VM stable and active. No action items for next shift. Continue monitoring for disconnects.
